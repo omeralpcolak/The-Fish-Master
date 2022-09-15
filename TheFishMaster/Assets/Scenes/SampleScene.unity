@@ -147,7 +147,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 90768011}
   m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 5.095, y: -4.123, z: 0}
+  m_LocalPosition: {x: 5.53, y: -7.07, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -356,6 +356,112 @@ Transform:
   - {fileID: 1199949145}
   m_Father: {fileID: 0}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &521696767
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 521696769}
+  - component: {fileID: 521696768}
+  m_Layer: 0
+  m_Name: Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &521696768
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 521696767}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e0d59d300931cb4d8d40bad4165f9e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fishPrefab: {fileID: 8383106307651037326, guid: 87f369a8ebe20f444b204a0d51ef98a9, type: 3}
+  fishTypes:
+  - price: 20
+    fishCount: 10
+    minLength: -30
+    maxLength: -50
+    colliderRadius: 0.2
+    sprite: {fileID: 21300000, guid: 82dd1a0c28d4acc47973ab58956d628f, type: 3}
+  - price: 25
+    fishCount: 10
+    minLength: -45
+    maxLength: -65
+    colliderRadius: 0.2
+    sprite: {fileID: 21300000, guid: 7255eedea3e55e342af84c074f466e73, type: 3}
+  - price: 30
+    fishCount: 10
+    minLength: -60
+    maxLength: -80
+    colliderRadius: 0.2
+    sprite: {fileID: 21300000, guid: 5e10153dc42214346968617c3e268137, type: 3}
+  - price: 35
+    fishCount: 20
+    minLength: -75
+    maxLength: -95
+    colliderRadius: 0.2
+    sprite: {fileID: 21300000, guid: 32a7d8554c45f74438bb7fd0a7dce006, type: 3}
+  - price: 40
+    fishCount: 10
+    minLength: -90
+    maxLength: -110
+    colliderRadius: 0.2
+    sprite: {fileID: 21300000, guid: d799ab79be8ab7841827afeb718ac19c, type: 3}
+  - price: 45
+    fishCount: 10
+    minLength: -105
+    maxLength: -125
+    colliderRadius: 0.2
+    sprite: {fileID: 21300000, guid: f2551482cd22ee24cb3b66d393e83650, type: 3}
+  - price: 50
+    fishCount: 10
+    minLength: -120
+    maxLength: -140
+    colliderRadius: 0.2
+    sprite: {fileID: 21300000, guid: 42e09a0396347b04398832e6f028bd8e, type: 3}
+  - price: 55
+    fishCount: 10
+    minLength: -135
+    maxLength: -155
+    colliderRadius: 0.2
+    sprite: {fileID: 21300000, guid: cdba33878e16dd34aa408f8e812a535f, type: 3}
+  - price: 60
+    fishCount: 10
+    minLength: -150
+    maxLength: -170
+    colliderRadius: 0.2
+    sprite: {fileID: 21300000, guid: e79ec8b9b28d79149809c0027da5c52e, type: 3}
+  - price: 65
+    fishCount: 10
+    minLength: -165
+    maxLength: -185
+    colliderRadius: 0.2
+    sprite: {fileID: 21300000, guid: 9819813cc1068cf469bec50e876fa071, type: 3}
+--- !u!4 &521696769
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 521696767}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &552591614
 GameObject:
@@ -1056,10 +1162,10 @@ CircleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 5.04, y: -4}
+  m_Offset: {x: 5.1, y: -5}
   serializedVersion: 2
   m_Radius: 0.3
 --- !u!50 &1939127015

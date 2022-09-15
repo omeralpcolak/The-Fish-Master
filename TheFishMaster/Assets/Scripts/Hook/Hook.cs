@@ -15,12 +15,15 @@ public class Hook : MonoBehaviour
 
     private bool camMove;
 
+    private List<Fish> hookedFishes;
+
     private Tweener cameraTween;
     
     void Awake()
     {
         mainCamera = Camera.main;
         coll = GetComponent<Collider2D>();
+        hookedFishes = new List<Fish>();
     }
 
     void Update()
@@ -59,7 +62,8 @@ public class Hook : MonoBehaviour
         //Screen (GAME)
         coll.enabled = false;
         camMove = true;
-        //Clear hook
+        hookedFishes.Clear();
+
 
     }
 
@@ -79,10 +83,39 @@ public class Hook : MonoBehaviour
             transform.position = Vector2.down * 6;
             coll.enabled = true;
             int num = 0;
-            //Clearing out the hook from the fishes
+            for (int i = 0; i < hookedFishes.Count; i++)
+            {
+                hookedFishes[i].transform.SetParent(null);
+                hookedFishes[i].ResetFish();
+                num *= hookedFishes[i].Type.price;
+            }
             //IdleManager Totalgain = num
             //ScreenManager End Screen
         });
+    }
+
+    private void OnTriggerEnter2D(Collider2D target)
+    {
+        if (target.CompareTag("Fish")&& fishCount != strength)
+        {
+            fishCount++;
+            Fish component = target.GetComponent<Fish>();
+            component.Hooked();
+            hookedFishes.Add(component);
+            target.transform.SetParent(transform);
+            target.transform.position = hookedTransform.position;
+            target.transform.rotation = hookedTransform.rotation;
+            target.transform.localScale = Vector3.one;
+
+            target.transform.DOShakeRotation(5, Vector3.forward * 45, 10, 90, false).SetLoops(1, LoopType.Yoyo).OnComplete(delegate
+            {
+                target.transform.rotation = Quaternion.identity;
+            });
+            if (fishCount == strength)
+            {
+                StopFishing();
+            }
+        }
     }
 
 }
