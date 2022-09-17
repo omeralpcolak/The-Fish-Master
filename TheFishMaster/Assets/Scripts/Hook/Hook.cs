@@ -107,7 +107,7 @@ public class Hook : MonoBehaviour
             target.transform.rotation = hookedTransform.rotation;
             target.transform.localScale = Vector3.one;
 
-            target.transform.DOShakeRotation(5, Vector3.forward * 45, 10, 90, false).SetLoops(1, LoopType.Yoyo).OnComplete(delegate
+            target.transform.DOShakeRotation(5, Vector3.forward * 10, 10, 90, false).SetLoops(1, LoopType.Yoyo).OnComplete(delegate
             {
                 target.transform.rotation = Quaternion.identity;
             });
