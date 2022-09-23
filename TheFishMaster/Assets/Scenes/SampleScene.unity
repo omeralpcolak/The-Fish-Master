@@ -340,7 +340,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 391173039}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 521696770}
+        m_TargetAssemblyTypeName: IdleManager, Assembly-CSharp
+        m_MethodName: CollectDoubleMoney
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &391173039
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -462,7 +474,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 400345801}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 521696770}
+        m_TargetAssemblyTypeName: IdleManager, Assembly-CSharp
+        m_MethodName: BuyOfflineEarnings
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &400345801
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -777,7 +801,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 504967663}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 521696770}
+        m_TargetAssemblyTypeName: IdleManager, Assembly-CSharp
+        m_MethodName: BuyStrength
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &504967663
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -912,6 +948,7 @@ GameObject:
   - component: {fileID: 521696769}
   - component: {fileID: 521696768}
   - component: {fileID: 521696770}
+  - component: {fileID: 521696771}
   m_Layer: 0
   m_Name: Manager
   m_TagString: Untagged
@@ -1006,7 +1043,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &521696770
 MonoBehaviour:
@@ -1028,6 +1065,34 @@ MonoBehaviour:
   offlineEarningsCost: 0
   wallet: 0
   totalGain: 0
+--- !u!114 &521696771
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 521696767}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f342b4689f003d4a8ea59e128ae80c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  endScreen: {fileID: 1069779888}
+  gameScreen: {fileID: 1640978219}
+  mainScreen: {fileID: 815741257}
+  returnScreen: {fileID: 1406489158}
+  lengthButton: {fileID: 1340138164}
+  strengthButton: {fileID: 504967662}
+  offlineButton: {fileID: 400345800}
+  gameScreenMoney: {fileID: 418920090}
+  lengthCostText: {fileID: 1106577852}
+  lengthValueText: {fileID: 1431595539}
+  strengthCostText: {fileID: 1689743503}
+  strengthValueText: {fileID: 679970381}
+  offlineCostText: {fileID: 840441874}
+  offlineValueText: {fileID: 499791576}
+  endScreenMoney: {fileID: 591682153}
+  returnScreenMoney: {fileID: 1012281700}
 --- !u!1 &552591614
 GameObject:
   m_ObjectHideFlags: 0
@@ -1087,13 +1152,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 552591614}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -540, y: -1200, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_Father: {fileID: 1047235749}
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &591682151
 GameObject:
@@ -1600,7 +1665,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 982695419}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 521696770}
+        m_TargetAssemblyTypeName: IdleManager, Assembly-CSharp
+        m_MethodName: CollectMoney
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &982695419
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1815,6 +1892,7 @@ RectTransform:
   - {fileID: 1640978220}
   - {fileID: 1069779889}
   - {fileID: 1406489159}
+  - {fileID: 552591617}
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2192,7 +2270,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1340138165}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 521696770}
+        m_TargetAssemblyTypeName: IdleManager, Assembly-CSharp
+        m_MethodName: BuyLength
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1340138165
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2313,7 +2403,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1359520602}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 521696770}
+        m_TargetAssemblyTypeName: IdleManager, Assembly-CSharp
+        m_MethodName: CollectMoney
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1359520602
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3125,14 +3227,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1939127013}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5, y: -5.39, z: 0}
+  m_LocalPosition: {x: -5, y: -5.38, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1364489642}
   - {fileID: 90768012}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1939127017
 MonoBehaviour:

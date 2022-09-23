@@ -39,8 +39,8 @@ public class Hook : MonoBehaviour
 
     public void StartFishing ()
     {
-        length = -50; //IdleManager
-        strength = 3; //IdleManager
+        length = IdleManager.instance.length - 20;
+        strength = IdleManager.instance.strength;
         fishCount = 0;
         float time = (-length) * 0.1f;
 
@@ -59,7 +59,7 @@ public class Hook : MonoBehaviour
                 }
             });
         });
-        //Screen (GAME)
+        ScreensManager.instance.ChangeScreen(Screens.GAME);
         coll.enabled = false;
         camMove = true;
         hookedFishes.Clear();
@@ -84,14 +84,16 @@ public class Hook : MonoBehaviour
             coll.enabled = true;
             int num = 0;
             for (int i = 0; i < hookedFishes.Count; i++)
-            {
-                hookedFishes[i].transform.SetParent(null);
-                hookedFishes[i].ResetFish();
-                num *= hookedFishes[i].Type.price;
-            }
-            //IdleManager Totalgain = num
-            //ScreenManager End Screen
+                {
+                    hookedFishes[i].transform.SetParent(null);
+                    hookedFishes[i].ResetFish();
+                    num *= hookedFishes[i].Type.price;
+                }
+            IdleManager.instance.totalGain = num;
+            ScreensManager.instance.ChangeScreen(Screens.END);
         });
+        
+        
     }
 
     private void OnTriggerEnter2D(Collider2D target)
